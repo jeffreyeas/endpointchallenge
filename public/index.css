@@ -1,0 +1,27 @@
+/* Add CSS styles here! */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  height: 40px;
+  background-color: rgb(66, 60, 102);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  line-height: 40px;
+  margin-left:10px;
+}

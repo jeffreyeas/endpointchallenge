@@ -1,0 +1,29 @@
+.line-through {
+    text-decoration: line-through;
+}
+
+.todo {
+    margin: 10px;
+}
+
+.description {
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.complete {
+    background-color: chartreuse;
+}
+
+.overdue {
+    background-color: rgb(233, 119, 119);
+}
+
+.checkbox {
+    margin-left: 5px;
+    margin-top: 2px;
+}
+
+.due-date {
+    float: right;
+}
