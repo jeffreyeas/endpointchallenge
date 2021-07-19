@@ -1,8 +1,9 @@
-# New Project
+# EndPoint Challenge
 
-EndPoint Challenge
+Enter in the api key and base url located in the snowpack.config.mjs file in the 'env' section.
 
-The api key and the base url is located in snowpack.config.mjs. I'm handing this in via email but in a regular repo, those values would be empty. This was done using snowpack but you should be able to
+    API_KEY: '<enter-api-key>',
+    BASE_URL: '<enter-base-url>'
 
 npm i
 npm run start

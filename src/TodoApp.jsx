@@ -3,22 +3,30 @@ import Todo from "./Components/Todo/Todo";
 import { Api } from "./utils/api.js";
 import "./TodoApp.css";
 import { formatList } from "./utils/listFormatter";
-import { usePromiseTracker, trackPromise } from "react-promise-tracker";
+import { Dimmer, Loader } from "semantic-ui-react";
 
 export default function TodoApp() {
   const [todoList, setTodoList] = useState([]);
-  const { promiseInProgress } = usePromiseTracker({ delay: 500 });
+  const [content, setContent] = useState(null);
+
   useEffect(() => {
-    trackPromise(
-      Api.getTodos().then((data) => {
-        const formattedList = formatList(data);
-        setTodoList(formattedList);
-      })
-    );
+    Api.getTodos().then((data) => {
+      const formattedList = formatList(data);
+      setTodoList(formattedList);
+      setContent(1);
+    });
   }, []);
 
-  return (
-    <>
+  if (!content) {
+    return (
+      <div className="Loader">
+        <Dimmer active inverted size="massive">
+          <Loader inverted>Loading</Loader>
+        </Dimmer>
+      </div>
+    );
+  } else {
+    return (
       <div className="container">
         {todoList.map((todo) => (
           <Todo
@@ -30,7 +38,6 @@ export default function TodoApp() {
           ></Todo>
         ))}
       </div>
-      <p>{promiseInProgress ? "loading" : ""}</p>
-    </>
-  );
+    );
+  }
 }

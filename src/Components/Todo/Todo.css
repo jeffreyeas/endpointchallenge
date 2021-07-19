@@ -4,6 +4,8 @@
 
 .todo {
     margin: 10px;
+    height: 25px;
+    line-height: 25px;
 }
 
 .description {

@@ -7,6 +7,7 @@ export default function Todo({ id, description, isComplete, dueDate }) {
   const [checked, setChecked] = useState(!!isComplete);
 
   // format date string in the same format as it is on the mockup
+
   let date = null;
   let formattedDate = null;
   if (dueDate !== null) {

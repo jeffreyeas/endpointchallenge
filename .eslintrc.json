@@ -8,6 +8,7 @@
     "standard",
     "plugin:prettier/recommended"
   ],
+
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
