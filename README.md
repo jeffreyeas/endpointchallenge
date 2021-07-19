@@ -1,12 +1,13 @@
 # EndPoint Challenge
 
-Enter in the api key and base url located in the snowpack.config.mjs file in the 'env' section.
+Enter in the api key and base url located in the snowpack.config.mjs file in the 'env' section. 
 
     API_KEY: '<enter-api-key>',
     BASE_URL: '<enter-base-url>'
 
 npm i
 npm run start
+
 
 It should work no different than Create-React-App (and a bit faster)
 
